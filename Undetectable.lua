@@ -2908,7 +2908,7 @@ function Flux:Window(text, bottom,mainclr)
 			)
 
 	_G.changeColor = function()
-	for i,v in pairs(game.CoreGui.FluxLib:GetDescendants()) do
+	for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.FluxLib:GetDescendants()) do
 	if v.Name == "Tab" and v.Parent.Name == "TabHold" then
 		v.BackgroundColor3 = _G.PresetColor
 	elseif v.Name == "CurrentValueFrame" and v.Parent.Name == "SlideFrame" then
